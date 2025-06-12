@@ -36,11 +36,12 @@ startup_delay = 3
 
 ### How to find position (coordinates):
 
-1. **Screenshot region**: Open powerhsell or termianl and type:
+1. **Screenshot region**: Open python interactive shell:
 ```python
 import pyautogui
 pyautogui.displayMousePosition()
 ```
+Now you'll be able to see the coordinates of the mouse in the python shell
 3. Move your mouse to the top-left corner of the area you want to capture → Note: X1, Y1
 4. Then move it to the bottom-right corner → Note: X2, Y2
 5. Set the left,top,right,bottom variables above
