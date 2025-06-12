@@ -22,8 +22,8 @@ output_pdf = r"C:\Users\YourName\Desktop\output.pdf"
 # Screenshot region position, See below how to obtain position
 left = 596         # X1
 top = 164          # Y1
-right = 1311       # X2 - X1
-bottom = 1150      # Y2 - Y1
+right = 1311       # X2
+bottom = 1150      # Y2
 
 # Next button position (where to click)
 next_button_x = 864
@@ -41,10 +41,14 @@ startup_delay = 3
 import pyautogui
 pyautogui.displayMousePosition()
 ```
-Now you'll be able to see the coordinates of the mouse in the python shell
+2. Now you'll be able to see the coordinates of the mouse in the python shell
 3. Move your mouse to the top-left corner of the area you want to capture → Note: X1, Y1
 4. Then move it to the bottom-right corner → Note: X2, Y2
-5. Set the left,top,right,bottom variables above
+5. Set the left, top, right, bottom variables above
+6. Press `Ctrl+C` to stop the coordinate display
+
+**For next button:**
+1. Hover over the "Next" button → note `next_button_x` and `next_button_y`
 
 ## Usage
 
