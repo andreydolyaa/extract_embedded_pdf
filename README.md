@@ -69,12 +69,6 @@ python main.py
 - **Configurable regions** and timing
 - **Automatic page navigation**
 
-## Requirements
-
-- Python 3.6+
-- Windows (uses pyautogui for clicking)
-- PDF viewer application
-
 ## Notes
 
 - Make sure your PDF viewer window is focused and visible
