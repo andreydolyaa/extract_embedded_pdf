@@ -1,0 +1,76 @@
+# Extract Read-Only Embedded PDF
+
+Automatically takes screenshots of PDF pages and converts them to a high-quality PDF book.
+
+## Installation
+
+1. Clone this repository
+2. Install requirements:
+```bash
+pip install -r requirements.txt
+```
+
+## Configuration
+
+Edit the variables at the top of `main.py`:
+
+```python
+# File paths
+save_dir = r"C:\Users\YourName\Desktop\screenshots"
+output_pdf = r"C:\Users\YourName\Desktop\output.pdf"
+
+# Screenshot region position, See below how to obtain position
+left = 596         # X1
+top = 164          # Y1
+right = 1311       # X2 - X1
+bottom = 1150      # Y2 - Y1
+
+# Next button position (where to click)
+next_button_x = 864
+next_button_y = 1114
+
+# Timing settings (in seconds)
+delay_between_pages = 0.5
+startup_delay = 3
+```
+
+### How to find position (coordinates):
+
+1. **Screenshot region**: Open powerhsell or termianl and type:
+   ```python
+    import pyautogui
+    pyautogui.displayMousePosition()
+   ```
+3. Move your mouse to the top-left corner of the area you want to capture → Note: X1, Y1
+4. Then move it to the bottom-right corner → Note: X2, Y2
+
+## Usage
+
+1. Open your PDF
+2. Edit the configuration variables at the top of `main.py`
+3. Run the script:
+```bash
+python main.py
+```
+4. Enter number of pages when prompted
+5. Focus your PDF viewer window within 3 seconds
+6. The script will automatically screenshot each page and create a PDF
+
+## Features
+
+- **High-quality screenshots** using MSS library
+- **Lossless PDF creation** with img2pdf
+- **Configurable regions** and timing
+- **Automatic page navigation**
+
+## Requirements
+
+- Python 3.6+
+- Windows (uses pyautogui for clicking)
+- PDF viewer application
+
+## Notes
+
+- Make sure your PDF viewer window is focused and visible
+- Test with a few pages first to ensure coordinates are correct
+- The script will create the output directory if it doesn't exist
